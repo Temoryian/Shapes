@@ -19,7 +19,7 @@ public class CuboidUnitTests {
 
 		// 2. Act
 		float actual = myCuboid.getWidth();
-		//myCuboid.render();
+		myCuboid.render();
 		// 3. Assert 
 		assertEquals("Width should equal 1.0f", expected, actual, 0);
 	}

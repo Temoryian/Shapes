@@ -6,18 +6,16 @@ public class ShapesTest {
 	public static void main(String[] args) {
 		
 		Dialog dialog = new MessageBox();
+		ShapeFactory shapeFactory = new ShapeFactory(dialog);
 		
-		//Instantiate Cuboid object
-		Cuboid cuboid = new Cuboid(dialog, 1, 1, 1);
-		//Instantiate Cylinder object
-		Cylinder cylinder = new Cylinder(dialog, 1, 1);
-		//Instantiate Sphere object
-		Sphere sphere = new Sphere(dialog, 1);
+		Cuboid cuboid = shapeFactory.buildCuboid(1,1,1);
+		Cylinder cylinder = shapeFactory.buildCylinder(1,1);
+		Sphere sphere = shapeFactory.buildSphere(1);
 		
-		//Render method calls to display dimensions, surface area, and volume of the Cuboid, Cylinder, & Sphere.
 		cuboid.render();
 		cylinder.render();
 		sphere.render();
+	
 	}
 
 }
